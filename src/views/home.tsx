@@ -1,4 +1,4 @@
-import type { SiteData } from './partials/layout.js';
+import type { SiteData } from '../lib/siteData.js';
 import { Layout } from './partials/layout.js';
 
 export const Home = (props: { siteData: SiteData; name: string }) => (
