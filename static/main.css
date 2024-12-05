@@ -1,4 +1,7 @@
-/* Heavily inspired by the Neat CSS framework: https://github.com/codazoda/neatcss */
+/*
+Original styles came from the Neat CSS framework: https://github.com/codazoda/neatcss
+Customized further to add wanted functionality.
+*/
 
 * {
     box-sizing: border-box;
@@ -106,8 +109,8 @@ main {
 
 .home {
     display: inline-block;
-    background-color: var(--dark);
-    color: var(--light);
+    /*background-color: var(--dark);*/
+    color: var(--dark);
     margin-top: 20px;
     padding: 5px 10px 5px 10px;
     text-decoration: none;

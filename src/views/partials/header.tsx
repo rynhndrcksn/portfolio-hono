@@ -2,6 +2,8 @@ import { html } from 'hono/html';
 
 export const Header = () => html`
     <header>
-        <a href="/">Home</a>
+        <nav class="navbar">
+            <a href="/" class="home">Home</a>
+        </nav>
     </header>
 `;

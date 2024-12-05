@@ -5,6 +5,7 @@ import type { SiteData } from '../../lib/siteData.js';
 import env from '../../env.js';
 
 export const Layout = (props: SiteData) => html`
+    <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
