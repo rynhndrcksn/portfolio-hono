@@ -1,8 +1,11 @@
 import { Footer } from './footer.js';
+import { getFileHash } from '../../lib/getFileHash.js';
 import { Header } from './header.js';
 import { html } from 'hono/html';
 import type { SiteData } from '../../lib/siteData.js';
 import env from '../../env.js';
+
+const mainCssHex = getFileHash('/static/main.css');
 
 export const Layout = (props: SiteData) => html`
     <!DOCTYPE html>
@@ -44,8 +47,8 @@ export const Layout = (props: SiteData) => html`
         <!-- Use an emoji as a favicon: https://css-tricks.com/emoji-as-a-favicon/ -->
         <link rel="icon"
               href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 16 16'><text x='0' y='14'>🐻</text></svg>" />
-        <link rel="preload" href="/static/main.css" as="style">
-        <link rel="stylesheet" href="/static/main.css">
+        <link rel="preload" href="/static/main.css?v=${mainCssHex}" as="style">
+        <link rel="stylesheet" href="/static/main.css?v=${mainCssHex}">
     <body>
     ${(<Header></Header>)}
     <main>
